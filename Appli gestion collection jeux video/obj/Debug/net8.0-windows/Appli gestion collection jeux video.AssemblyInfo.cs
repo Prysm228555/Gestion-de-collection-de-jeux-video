@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Appli gestion collection jeux video")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98dae33e359299156471b42a8c76a8e580e69b47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f03d4c99c08c4bbf4957dd69b0748e4c4cc12887")]
 [assembly: System.Reflection.AssemblyProductAttribute("Appli gestion collection jeux video")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Appli gestion collection jeux video")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
