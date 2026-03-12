@@ -1614,11 +1614,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mchevalier\\Desktop\\C#\\AP-Gestion jeu video\\Gestion-de-collection-de-jeux-video\\Appli gestion collection jeux video\\Appli gestion collection jeux video.csproj",
+      "projectUniqueName": "C:\\Users\\mchevalier\\Desktop\\C#\\AP-Gestion jeu video\\Appli gestion collection jeux video\\Appli gestion collection jeux video.csproj",
       "projectName": "Appli gestion collection jeux video",
-      "projectPath": "C:\\Users\\mchevalier\\Desktop\\C#\\AP-Gestion jeu video\\Gestion-de-collection-de-jeux-video\\Appli gestion collection jeux video\\Appli gestion collection jeux video.csproj",
+      "projectPath": "C:\\Users\\mchevalier\\Desktop\\C#\\AP-Gestion jeu video\\Appli gestion collection jeux video\\Appli gestion collection jeux video.csproj",
       "packagesPath": "C:\\Users\\mchevalier\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mchevalier\\Desktop\\C#\\AP-Gestion jeu video\\Gestion-de-collection-de-jeux-video\\Appli gestion collection jeux video\\obj\\",
+      "outputPath": "C:\\Users\\mchevalier\\Desktop\\C#\\AP-Gestion jeu video\\Appli gestion collection jeux video\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

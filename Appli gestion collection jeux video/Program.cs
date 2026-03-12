@@ -1,62 +1,39 @@
 using System;
 using System.Data.Common;
+using AP_test1;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static Utilisateur;
 
-namespace AP_test1
+
+class Program
 {
-    internal static class Program
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        string connectionString = "server=localhost;user=root;database=r2d2;port=3306;password=";
+
+        using (MySqlConnection maConnection = new MySqlConnection(connectionString))
         {
-            // connexion à la base
-            // Chaîne de connexion à la base de données MySQL
-            MySqlConnection? maConnection;
-            string connectionString = "server=localhost;user=root;database=r2d2;port=3306;password=";
-            Console.WriteLine("START");
-
-            // Création d'une nouvelle connexion MySQL
-            using (maConnection = new MySqlConnection(connectionString))
+            try
             {
-                try
+                maConnection.Open();
+                Console.WriteLine("Connexion réussie à la base de données MySQL.");
+
+                List<Utilisateur> users = Utilisateur.GetUtilisateurs(maConnection);
+
+                foreach (var user in users)
                 {
-                    // Ouverture de la connexion
-                    maConnection.Open();
-                    Console.WriteLine("Connexion réussie à la base de données MySQL.");
-
-                    // Exemple de requête SQL
-                    string query = "SELECT * FROM sexe";
-
-                    // Création d'une commande SQL
-                    using (MySqlCommand command = new MySqlCommand(query, maConnection))
-                    {
-                        Console.WriteLine(maConnection.IsDisposed);
-                        // Exécution de la commande et lecture des résultats
-                        using (MySqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Console.WriteLine(reader[0] + " " + reader[1] + " " + reader[2]);
-                            }
-                        }
-                    }
+                    Console.WriteLine(user.GetNom() + " " + user.GetPrenom());
                 }
-                catch (Exception ex)
-                {
-                    // Gestion des erreurs de connexion
-                    Console.WriteLine("Erreur de connexion : " + ex.Message);
-                }
-
-                // To customize application configuration such as set high DPI settings or default font,
-                // see https://aka.ms/applicationconfiguration.
-     
-                ApplicationConfiguration.Initialize();
-                Application.Run(new Form1(maConnection));
             }
-        
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur : " + ex.Message);
+            }
+
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1(maConnection));
         }
     }
 }
